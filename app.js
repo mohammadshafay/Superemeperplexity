@@ -1,4 +1,4 @@
-// Application Data with Enhanced Dashboard Data
+// Application Data
 const appData = {
   company: {
     name: "SUPREME HANDLOOM",
@@ -8,49 +8,6 @@ const appData = {
     address: "101/198 Beconganj Kanpur",
     experience: "58+ years"
   },
-  dashboardData: {
-    totalRevenue: 2847563,
-    totalOrders: 1247,
-    activeCustomers: 89,
-    revenueGrowth: 12.5,
-    orderGrowth: 8.3,
-    customerGrowth: 15.2,
-    monthlyRevenue: [
-      {month: "Jan", revenue: 185000, orders: 95},
-      {month: "Feb", revenue: 220000, orders: 108},
-      {month: "Mar", revenue: 275000, orders: 125},
-      {month: "Apr", revenue: 195000, orders: 89},
-      {month: "May", revenue: 285000, orders: 132},
-      {month: "Jun", revenue: 315000, orders: 145},
-      {month: "Jul", revenue: 245000, orders: 118},
-      {month: "Aug", revenue: 295000, orders: 135},
-      {month: "Sep", revenue: 335000, orders: 152},
-      {month: "Oct", revenue: 285000, orders: 128},
-      {month: "Nov", revenue: 315000, orders: 148},
-      {month: "Dec", revenue: 355000, orders: 165}
-    ]
-  },
-  productLeaderboard: [
-    {name: "Cotton Bedsheet", sales: 2847, revenue: 1893820, growth: 15.2, category: "Bedsheet"},
-    {name: "Traditional Lungi", sales: 3256, revenue: 976800, growth: 12.8, category: "Lungi"},
-    {name: "Woolen Blanket", sales: 892, revenue: 1248600, growth: -3.2, category: "Blanket"},
-    {name: "Cotton Gamcha", sales: 4235, revenue: 635250, growth: 8.9, category: "Gamcha"},
-    {name: "Handloom Chadar", sales: 1156, revenue: 578000, growth: 22.1, category: "Chadar"},
-    {name: "Suit Material", sales: 567, revenue: 453600, growth: 5.7, category: "Suit"}
-  ],
-  customerLeaderboard: [
-    {name: "Rajesh Textiles Pvt Ltd", orders: 156, revenue: 456789, gst: "22AAAAA0000A1Z5", growth: 18.5},
-    {name: "Mumbai Wholesale Hub", orders: 134, revenue: 398456, gst: "27BBBBB1111B2Y4", growth: 12.3},
-    {name: "Delhi Fashion Center", orders: 128, revenue: 356789, gst: "07CCCCC2222C3X3", growth: -2.1},
-    {name: "Kolkata Handloom Co", orders: 98, revenue: 289456, gst: "19DDDDD3333D4W2", growth: 25.6},
-    {name: "Chennai Textile Mart", orders: 87, revenue: 234567, gst: "33EEEEE4444E5V1", growth: 8.9}
-  ],
-  recentOrders: [
-    {id: "SH-2025-001", customer: "Rajesh Textiles Pvt Ltd", product: "Cotton Bedsheet", quantity: 250, amount: 175000, status: "Delivered", date: "2025-08-20"},
-    {id: "SH-2025-002", customer: "Mumbai Wholesale Hub", product: "Traditional Lungi", quantity: 500, amount: 125000, status: "Processing", date: "2025-08-21"},
-    {id: "SH-2025-003", customer: "Delhi Fashion Center", product: "Woolen Blanket", quantity: 100, amount: 140000, status: "Shipped", date: "2025-08-19"},
-    {id: "SH-2025-004", customer: "Kolkata Handloom Co", product: "Cotton Gamcha", quantity: 800, amount: 96000, status: "Confirmed", date: "2025-08-21"}
-  ],
   products: [
     {
       id: 1,
@@ -59,20 +16,16 @@ const appData = {
       description: "Premium quality handwoven lungis in various colors and patterns",
       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
       price: "₹150-300 per piece",
-      minOrder: "100 pieces",
-      stock: 2500,
-      sold: 3256
+      minOrder: "100 pieces"
     },
     {
       id: 2,
       name: "Cotton Gamcha",
-      category: "Gamcha", 
+      category: "Gamcha",
       description: "Soft cotton gamchas for daily use, wholesale quantities available",
       image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop",
       price: "₹80-150 per piece",
-      minOrder: "200 pieces",
-      stock: 3800,
-      sold: 4235
+      minOrder: "200 pieces"
     },
     {
       id: 3,
@@ -81,9 +34,7 @@ const appData = {
       description: "Traditional handwoven chadars in various designs",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
       price: "₹300-600 per piece",
-      minOrder: "50 pieces",
-      stock: 1200,
-      sold: 1156
+      minOrder: "50 pieces"
     },
     {
       id: 4,
@@ -92,9 +43,7 @@ const appData = {
       description: "Pure cotton handloom bedsheets in single and double sizes",
       image: "https://images.unsplash.com/photo-1631049421450-348ccd7f8949?w=400&h=300&fit=crop",
       price: "₹400-800 per piece",
-      minOrder: "25 pieces",
-      stock: 1800,
-      sold: 2847
+      minOrder: "25 pieces"
     },
     {
       id: 5,
@@ -103,9 +52,7 @@ const appData = {
       description: "Warm handwoven blankets for winter season",
       image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop",
       price: "₹800-1500 per piece",
-      minOrder: "20 pieces",
-      stock: 950,
-      sold: 892
+      minOrder: "20 pieces"
     },
     {
       id: 6,
@@ -114,15 +61,13 @@ const appData = {
       description: "Premium handloom fabric for traditional suits",
       image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=300&fit=crop",
       price: "₹500-1200 per meter",
-      minOrder: "10 meters",
-      stock: 450,
-      sold: 567
+      minOrder: "10 meters"
     }
   ],
-  categories: ["All", "Lungi", "Gamcha", "Chadar", "Bedsheet", "Blanket", "Suit"],
+  categories: ["Lungi", "Gamcha", "Chadar", "Bedsheet", "Blanket", "Suit"],
   socialMedia: {
     facebook: "#",
-    instagram: "#",
+    instagram: "#", 
     linkedin: "#",
     whatsapp: "https://wa.me/919119995353"
   },
@@ -133,6 +78,12 @@ const appData = {
   gstValidation: {
     pattern: "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$",
     example: "22AAAAA0000A1Z5"
+  },
+  verificationMessages: {
+    unregistered: "Please register with your GST number and log in to view wholesale prices",
+    pendingVerification: "Your GST number is under verification. Prices will be visible once verified.",
+    verified: "Welcome! You can now view our wholesale prices.",
+    registerPrompt: "Register with GST to access wholesale prices"
   }
 };
 
@@ -141,7 +92,6 @@ let currentUser = null;
 let currentUserType = null;
 let customers = [];
 let currentFilter = 'all';
-let charts = {};
 
 // Initialize customers data immediately
 customers = [
@@ -158,8 +108,7 @@ customers = [
     gstRejected: false,
     registrationDate: '2024-01-15',
     verificationDate: '2024-01-16',
-    status: 'Active',
-    revenue: 456789
+    status: 'Active'
   },
   {
     id: 2,
@@ -173,8 +122,7 @@ customers = [
     gstVerified: false,
     gstRejected: false,
     registrationDate: '2024-02-10',
-    status: 'Active',
-    revenue: 125000
+    status: 'Active'
   },
   {
     id: 3,
@@ -188,40 +136,33 @@ customers = [
     gstVerified: false,
     gstRejected: true,
     registrationDate: '2024-02-20',
-    status: 'Active',
-    revenue: 75000
+    status: 'Active'
   }
 ];
 
-// Global Functions - Define and attach immediately
-window.showLoginModal = function() {
-  console.log('Opening login modal...');
+// Global Functions - Attach to window immediately
+function showLoginModal() {
   const modal = document.getElementById('loginModal');
   if (modal) {
     modal.classList.remove('hidden');
-  } else {
-    console.error('Login modal not found');
   }
-};
+}
 
-window.showAdminModal = function() {
-  console.log('Opening admin modal...');
+function showAdminModal() {
   const modal = document.getElementById('adminModal');
   if (modal) {
     modal.classList.remove('hidden');
-  } else {
-    console.error('Admin modal not found');
   }
-};
+}
 
-window.closeModal = function(modalId) {
+function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
     modal.classList.add('hidden');
   }
-};
+}
 
-window.showTab = function(tabName) {
+function showTab(tabName) {
   // Hide all tabs
   document.querySelectorAll('.tab-content').forEach(tab => {
     tab.classList.remove('active');
@@ -239,12 +180,10 @@ window.showTab = function(tabName) {
   }
   
   // Add active class to clicked button
-  if (event && event.target) {
-    event.target.classList.add('active');
-  }
-};
+  event.target.classList.add('active');
+}
 
-window.logout = function() {
+function logout() {
   currentUser = null;
   currentUserType = null;
   
@@ -259,9 +198,9 @@ window.logout = function() {
   });
   
   showNotification('Logged out successfully!', 'success');
-};
+}
 
-window.scrollToProducts = function() {
+function scrollToProducts() {
   const productsSection = document.getElementById('products');
   if (productsSection) {
     productsSection.scrollIntoView({
@@ -269,27 +208,27 @@ window.scrollToProducts = function() {
       block: 'start'
     });
   }
-};
+}
 
-window.editProduct = function(productId) {
+function editProduct(productId) {
   showNotification('Edit product functionality would open a form to modify product details.', 'info');
-};
+}
 
-window.deleteProduct = function(productId) {
+function deleteProduct(productId) {
   if (confirm('Are you sure you want to delete this product?')) {
     showNotification('Product deleted successfully!', 'success');
   }
-};
+}
 
-window.viewCustomer = function(customerId) {
+function viewCustomer(customerId) {
   const customer = customers.find(c => c.id === customerId);
   if (customer) {
     const verificationStatus = customer.gstVerified ? 'Verified' : 'Pending Verification';
     alert(`Customer Details:\n\nCompany: ${customer.companyName}\nContact: ${customer.contactPerson}\nEmail: ${customer.email}\nPhone: ${customer.phone}\nCustomer ID: ${customer.customerId}\nGST Number: ${customer.gstNumber}\nVerification Status: ${verificationStatus}`);
   }
-};
+}
 
-window.verifyCustomer = function(customerId) {
+function verifyCustomer(customerId) {
   const customer = customers.find(c => c.id === customerId);
   if (customer && !customer.gstVerified) {
     customer.gstVerified = true;
@@ -298,11 +237,10 @@ window.verifyCustomer = function(customerId) {
     loadCustomersTable();
     loadPendingVerifications();
     updateStats();
-    updateVerificationStats();
   }
-};
+}
 
-window.rejectCustomer = function(customerId) {
+function rejectCustomer(customerId) {
   const customer = customers.find(c => c.id === customerId);
   if (customer && !customer.gstVerified) {
     customer.gstRejected = true;
@@ -310,28 +248,26 @@ window.rejectCustomer = function(customerId) {
     loadCustomersTable();
     loadPendingVerifications();
     updateStats();
-    updateVerificationStats();
   }
-};
+}
 
-window.showAddProductForm = function() {
+function showAddProductForm() {
   showNotification('Add product functionality would open a form to create new products.', 'info');
-};
+}
 
-window.addCustomer = function() {
-  showNotification('Add customer functionality would open a form to create new customers.', 'info');
-};
-
-window.exportReport = function() {
-  showNotification('Export report functionality would generate and download business reports.', 'success');
-};
-
-window.refreshAnalytics = function() {
-  showNotification('Analytics data refreshed successfully!', 'success');
-  if (currentUserType === 'admin') {
-    loadAnalyticsCharts();
-  }
-};
+// Attach global functions to window
+window.showLoginModal = showLoginModal;
+window.showAdminModal = showAdminModal;
+window.closeModal = closeModal;
+window.showTab = showTab;
+window.logout = logout;
+window.scrollToProducts = scrollToProducts;
+window.editProduct = editProduct;
+window.deleteProduct = deleteProduct;
+window.viewCustomer = viewCustomer;
+window.verifyCustomer = verifyCustomer;
+window.rejectCustomer = rejectCustomer;
+window.showAddProductForm = showAddProductForm;
 
 // GST Validation Function
 function validateGST(gstNumber) {
@@ -352,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show demo credentials after a delay
     setTimeout(() => {
       showNotification('Demo: Use "demo@example.com" / "demo123" for verified customer login. Admin: "admin" / "admin123"', 'info');
-    }, 2000);
+    }, 3000);
     
     console.log('App initialized successfully');
   } catch (error) {
@@ -410,19 +346,6 @@ function setupEventListeners() {
   if (gstInput) {
     gstInput.addEventListener('input', formatGSTInput);
   }
-
-  // Add event listeners to dynamically created buttons
-  setupDynamicEventListeners();
-}
-
-function setupDynamicEventListeners() {
-  // Use event delegation for dynamically created buttons
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('login-to-view-btn')) {
-      e.preventDefault();
-      window.showLoginModal();
-    }
-  });
 }
 
 function formatGSTInput(e) {
@@ -499,8 +422,6 @@ function handleCustomerLogin(e) {
   const username = document.getElementById('loginUsername').value;
   const password = document.getElementById('loginPassword').value;
   
-  console.log('Login attempt:', username);
-  
   // Find customer
   const customer = customers.find(c => 
     c.email === username || c.customerId === username
@@ -509,7 +430,7 @@ function handleCustomerLogin(e) {
   if (customer && customer.password === password) {
     currentUser = customer;
     currentUserType = 'customer';
-    window.closeModal('loginModal');
+    closeModal('loginModal');
     showCustomerDashboard();
     
     // Show verification status message
@@ -564,8 +485,7 @@ function handleCustomerRegistration(e) {
     gstVerified: false,
     gstRejected: false,
     registrationDate: new Date().toISOString().split('T')[0],
-    status: 'Active',
-    revenue: 0
+    status: 'Active'
   };
   
   customers.push(newCustomer);
@@ -575,7 +495,7 @@ function handleCustomerRegistration(e) {
   // Auto login
   currentUser = newCustomer;
   currentUserType = 'customer';
-  window.closeModal('loginModal');
+  closeModal('loginModal');
   showCustomerDashboard();
 }
 
@@ -586,13 +506,11 @@ function handleAdminLogin(e) {
   const username = document.getElementById('adminUsername').value;
   const password = document.getElementById('adminPassword').value;
   
-  console.log('Admin login attempt:', username, password);
-  
   if (username === appData.adminCredentials.username && 
       password === appData.adminCredentials.password) {
     currentUser = { username: 'admin', name: 'Administrator' };
     currentUserType = 'admin';
-    window.closeModal('adminModal');
+    closeModal('adminModal');
     showAdminDashboard();
     showNotification('Admin login successful!', 'success');
   } else {
@@ -608,12 +526,12 @@ function getVerificationMessage(customer) {
     };
   } else if (customer.gstVerified) {
     return {
-      message: 'Welcome! You can now view our wholesale prices.',
+      message: appData.verificationMessages.verified,
       type: 'success'
     };
   } else {
     return {
-      message: 'Your GST number is under verification. Prices will be visible once verified.',
+      message: appData.verificationMessages.pendingVerification,
       type: 'warning'
     };
   }
@@ -630,18 +548,16 @@ function showCustomerDashboard() {
   
   // Show customer dashboard
   const dashboard = document.getElementById('customerDashboard');
-  if (dashboard) {
-    dashboard.classList.remove('hidden');
-    
-    // Update user info and verification status
-    updateCustomerDashboardInfo();
-    
-    // Load catalog with proper access control
-    loadCustomerCatalog();
-    
-    // Set active section
-    showDashboardSection('catalog');
-  }
+  dashboard.classList.remove('hidden');
+  
+  // Update user info and verification status
+  updateCustomerDashboardInfo();
+  
+  // Load catalog with proper access control
+  loadCustomerCatalog();
+  
+  // Set active section
+  showDashboardSection('catalog');
 }
 
 function updateCustomerDashboardInfo() {
@@ -702,53 +618,16 @@ function showAdminDashboard() {
   
   // Show admin dashboard
   const dashboard = document.getElementById('adminDashboard');
-  if (dashboard) {
-    dashboard.classList.remove('hidden');
-    
-    // Load admin data
-    updateDashboardWidgets();
-    updateStats();
-    loadCustomersTable();
-    loadPendingVerifications();
-    loadAdminProducts();
-    loadRecentOrders();
-    updateVerificationStats();
-    
-    // Load charts after a short delay
-    setTimeout(() => {
-      initializeDashboardCharts();
-    }, 200);
-    
-    // Set active section
-    showAdminDashboardSection('overview');
-  }
-}
-
-function updateDashboardWidgets() {
-  // Update revenue widget
-  const totalRevenueEl = document.getElementById('totalRevenue');
-  if (totalRevenueEl) {
-    totalRevenueEl.textContent = `₹${(appData.dashboardData.totalRevenue / 100000).toFixed(1)}L`;
-  }
-
-  // Update orders widget
-  const totalOrdersEl = document.getElementById('totalOrders');
-  if (totalOrdersEl) {
-    totalOrdersEl.textContent = appData.dashboardData.totalOrders.toLocaleString();
-  }
-
-  // Update customers widget
-  const activeCustomersEl = document.getElementById('activeCustomers');
-  if (activeCustomersEl) {
-    activeCustomersEl.textContent = appData.dashboardData.activeCustomers.toString();
-  }
-
-  // Update GST verified count
-  const gstVerifiedEl = document.getElementById('gstVerified');
-  if (gstVerifiedEl) {
-    const verifiedCount = customers.filter(c => c.gstVerified).length;
-    gstVerifiedEl.textContent = verifiedCount.toString();
-  }
+  dashboard.classList.remove('hidden');
+  
+  // Load admin data
+  updateStats();
+  loadCustomersTable();
+  loadPendingVerifications();
+  loadAdminProducts();
+  
+  // Set active section
+  showDashboardSection('overview');
 }
 
 function updateStats() {
@@ -765,19 +644,7 @@ function updateStats() {
   if (pendingVerificationEl) pendingVerificationEl.textContent = pendingVerification;
 }
 
-function updateVerificationStats() {
-  const pendingCount = customers.filter(c => !c.gstVerified && !c.gstRejected).length;
-  const verifiedCount = customers.filter(c => c.gstVerified).length;
-  
-  const pendingEl = document.getElementById('pendingCount');
-  const verifiedEl = document.getElementById('verifiedCount');
-  
-  if (pendingEl) pendingEl.textContent = `${pendingCount} Pending`;
-  if (verifiedEl) verifiedEl.textContent = `${verifiedCount} Verified`;
-}
-
 function setupDashboardNavigation() {
-  // Customer dashboard navigation
   document.querySelectorAll('.menu-link').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -791,30 +658,6 @@ function setupDashboardNavigation() {
         parentSidebar.querySelectorAll('.menu-link').forEach(l => l.classList.remove('active'));
       }
       link.classList.add('active');
-    });
-  });
-
-  // Admin dashboard navigation
-  document.querySelectorAll('.nav-item').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      const section = link.getAttribute('data-section');
-      showAdminDashboardSection(section);
-      
-      // Update active state
-      const parentSidebar = link.closest('.admin-sidebar');
-      if (parentSidebar) {
-        parentSidebar.querySelectorAll('.nav-item').forEach(l => l.classList.remove('active'));
-      }
-      link.classList.add('active');
-      
-      // Load section-specific data
-      if (section === 'leaderboard') {
-        setTimeout(() => loadLeaderboards(), 100);
-      } else if (section === 'analytics') {
-        setTimeout(() => loadAnalyticsCharts(), 100);
-      }
     });
   });
 }
@@ -832,356 +675,11 @@ function showDashboardSection(sectionName) {
   if (targetSection) {
     targetSection.classList.add('active');
   }
-}
-
-function showAdminDashboardSection(sectionName) {
-  console.log('Showing admin dashboard section:', sectionName);
   
-  // Hide all sections
-  document.querySelectorAll('.admin-section').forEach(section => {
-    section.classList.remove('active');
-  });
-  
-  // Show selected section
-  const targetSection = document.getElementById(sectionName + 'Section');
-  if (targetSection) {
-    targetSection.classList.add('active');
+  // Load data if needed
+  if (sectionName === 'verification' && currentUserType === 'admin') {
+    loadPendingVerifications();
   }
-}
-
-// Chart Functions
-function initializeDashboardCharts() {
-  try {
-    initializeRevenueChart();
-    initializeOrdersChart();
-  } catch (error) {
-    console.error('Error initializing charts:', error);
-  }
-}
-
-function initializeRevenueChart() {
-  const ctx = document.getElementById('revenueChart');
-  if (!ctx) return;
-
-  try {
-    if (charts.revenue) {
-      charts.revenue.destroy();
-    }
-
-    charts.revenue = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: appData.dashboardData.monthlyRevenue.map(item => item.month),
-        datasets: [{
-          label: 'Revenue (₹)',
-          data: appData.dashboardData.monthlyRevenue.map(item => item.revenue),
-          borderColor: '#1FB8CD',
-          backgroundColor: 'rgba(31, 184, 205, 0.1)',
-          borderWidth: 3,
-          tension: 0.4,
-          pointRadius: 6,
-          pointBackgroundColor: '#1FB8CD',
-          pointBorderColor: '#ffffff',
-          pointBorderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-            titleColor: '#ffffff',
-            bodyColor: '#ffffff',
-            callbacks: {
-              label: function(context) {
-                return `Revenue: ₹${context.parsed.y.toLocaleString()}`;
-              }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function(value) {
-                return '₹' + (value / 1000) + 'k';
-              }
-            }
-          }
-        }
-      }
-    });
-  } catch (error) {
-    console.error('Error creating revenue chart:', error);
-  }
-}
-
-function initializeOrdersChart() {
-  const ctx = document.getElementById('ordersChart');
-  if (!ctx) return;
-
-  try {
-    if (charts.orders) {
-      charts.orders.destroy();
-    }
-
-    charts.orders = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: appData.dashboardData.monthlyRevenue.map(item => item.month),
-        datasets: [{
-          label: 'Orders',
-          data: appData.dashboardData.monthlyRevenue.map(item => item.orders),
-          backgroundColor: '#FFC185',
-          borderColor: '#D2BA4C',
-          borderWidth: 1,
-          borderRadius: 4
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  } catch (error) {
-    console.error('Error creating orders chart:', error);
-  }
-}
-
-function loadAnalyticsCharts() {
-  setTimeout(() => {
-    try {
-      initializeRevenueAnalyticsChart();
-      initializeCategoryChart();
-      initializeProductTrendsChart();
-    } catch (error) {
-      console.error('Error loading analytics charts:', error);
-    }
-  }, 100);
-}
-
-function initializeRevenueAnalyticsChart() {
-  const ctx = document.getElementById('revenueAnalyticsChart');
-  if (!ctx) return;
-
-  try {
-    if (charts.revenueAnalytics) {
-      charts.revenueAnalytics.destroy();
-    }
-
-    charts.revenueAnalytics = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: appData.dashboardData.monthlyRevenue.map(item => item.month),
-        datasets: [{
-          label: 'Revenue',
-          data: appData.dashboardData.monthlyRevenue.map(item => item.revenue),
-          borderColor: '#5D878F',
-          backgroundColor: 'rgba(93, 135, 143, 0.1)',
-          borderWidth: 2,
-          tension: 0.4,
-          fill: true
-        }, {
-          label: 'Orders',
-          data: appData.dashboardData.monthlyRevenue.map(item => item.orders * 2000),
-          borderColor: '#B4413C',
-          backgroundColor: 'rgba(180, 65, 60, 0.1)',
-          borderWidth: 2,
-          tension: 0.4,
-          fill: false
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: {
-          intersect: false,
-          mode: 'index'
-        },
-        plugins: {
-          legend: {
-            position: 'top'
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  } catch (error) {
-    console.error('Error creating revenue analytics chart:', error);
-  }
-}
-
-function initializeCategoryChart() {
-  const ctx = document.getElementById('categoryChart');
-  if (!ctx) return;
-
-  try {
-    if (charts.category) {
-      charts.category.destroy();
-    }
-
-    const categoryData = appData.productLeaderboard.reduce((acc, product) => {
-      acc[product.category] = (acc[product.category] || 0) + product.revenue;
-      return acc;
-    }, {});
-
-    charts.category = new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: Object.keys(categoryData),
-        datasets: [{
-          data: Object.values(categoryData),
-          backgroundColor: ['#1FB8CD', '#FFC185', '#B4413C', '#5D878F', '#DB4545', '#D2BA4C']
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'right'
-          }
-        }
-      }
-    });
-  } catch (error) {
-    console.error('Error creating category chart:', error);
-  }
-}
-
-function initializeProductTrendsChart() {
-  const ctx = document.getElementById('productTrendsChart');
-  if (!ctx) return;
-
-  try {
-    if (charts.productTrends) {
-      charts.productTrends.destroy();
-    }
-
-    charts.productTrends = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: appData.productLeaderboard.map(p => p.name),
-        datasets: [{
-          label: 'Growth %',
-          data: appData.productLeaderboard.map(p => p.growth),
-          backgroundColor: appData.productLeaderboard.map(p => p.growth > 0 ? '#10B981' : '#EF4444'),
-          borderRadius: 4
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        indexAxis: 'y',
-        plugins: {
-          legend: {
-            display: false
-          }
-        },
-        scales: {
-          x: {
-            beginAtZero: true,
-            ticks: {
-              callback: function(value) {
-                return value + '%';
-              }
-            }
-          }
-        }
-      }
-    });
-  } catch (error) {
-    console.error('Error creating product trends chart:', error);
-  }
-}
-
-function loadLeaderboards() {
-  loadProductLeaderboard();
-  loadCustomerLeaderboard();
-}
-
-function loadProductLeaderboard() {
-  const container = document.getElementById('productLeaderboard');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  appData.productLeaderboard.forEach((product, index) => {
-    const item = document.createElement('div');
-    item.className = 'leaderboard-item';
-    
-    const rankClass = index < 3 ? `leaderboard-rank--${index + 1}` : 'leaderboard-rank--other';
-    const trendClass = product.growth > 0 ? 'trend-indicator--positive' : 'trend-indicator--negative';
-    const trendIcon = product.growth > 0 ? 'fa-arrow-up' : 'fa-arrow-down';
-    
-    item.innerHTML = `
-      <div class="leaderboard-rank ${rankClass}">${index + 1}</div>
-      <div class="leaderboard-info">
-        <div class="leaderboard-name">${product.name}</div>
-        <div class="leaderboard-details">${product.sales} units sold</div>
-        <div class="trend-indicator ${trendClass}">
-          <i class="fas ${trendIcon}"></i> ${Math.abs(product.growth)}%
-        </div>
-      </div>
-      <div class="leaderboard-value">
-        <div class="leaderboard-primary">₹${(product.revenue / 100000).toFixed(1)}L</div>
-        <div class="leaderboard-secondary">${product.category}</div>
-      </div>
-    `;
-    
-    container.appendChild(item);
-  });
-}
-
-function loadCustomerLeaderboard() {
-  const container = document.getElementById('customerLeaderboard');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  appData.customerLeaderboard.forEach((customer, index) => {
-    const item = document.createElement('div');
-    item.className = 'leaderboard-item';
-    
-    const rankClass = index < 3 ? `leaderboard-rank--${index + 1}` : 'leaderboard-rank--other';
-    const trendClass = customer.growth > 0 ? 'trend-indicator--positive' : 'trend-indicator--negative';
-    const trendIcon = customer.growth > 0 ? 'fa-arrow-up' : 'fa-arrow-down';
-    
-    item.innerHTML = `
-      <div class="leaderboard-rank ${rankClass}">${index + 1}</div>
-      <div class="leaderboard-info">
-        <div class="leaderboard-name">${customer.name}</div>
-        <div class="leaderboard-details">${customer.orders} orders</div>
-        <div class="trend-indicator ${trendClass}">
-          <i class="fas ${trendIcon}"></i> ${Math.abs(customer.growth)}%
-        </div>
-      </div>
-      <div class="leaderboard-value">
-        <div class="leaderboard-primary">₹${(customer.revenue / 100000).toFixed(1)}L</div>
-        <div class="leaderboard-secondary">${customer.gst}</div>
-      </div>
-    `;
-    
-    container.appendChild(item);
-  });
 }
 
 // Product Functions
@@ -1198,7 +696,7 @@ function loadProducts() {
     : appData.products.filter(product => product.category === currentFilter);
   
   filteredProducts.forEach(product => {
-    const productCard = createProductCard(product, false);
+    const productCard = createProductCard(product, false); // false = not logged in as verified customer
     productGrid.appendChild(productCard);
   });
 }
@@ -1214,7 +712,7 @@ function createProductCard(product, showPrices = false) {
     priceContent = `
       <div class="price-placeholder">
         <div class="price-placeholder-text">Please register with your GST number and log in to view wholesale prices</div>
-        <button class="btn btn--primary btn--sm login-to-view-btn">Login to View Prices</button>
+        <button class="btn btn--primary btn--sm login-to-view-btn" onclick="showLoginModal()">Login to View Prices</button>
       </div>
     `;
   }
@@ -1318,15 +816,11 @@ function loadAdminProducts() {
         <p>${product.description}</p>
         <div class="product-price">${product.price}</div>
         <div style="margin-top: 8px; font-size: 12px; color: var(--color-text-secondary);">
-          Stock: ${product.stock} | Sold: ${product.sold}
+          Min Order: ${product.minOrder}
         </div>
-        <div class="product-actions">
-          <button class="btn btn--sm btn--primary" onclick="editProduct(${product.id})">
-            <i class="fas fa-edit"></i> Edit
-          </button>
-          <button class="btn btn--sm btn--outline" onclick="deleteProduct(${product.id})">
-            <i class="fas fa-trash"></i> Delete
-          </button>
+        <div class="product-actions" style="margin-top: 12px;">
+          <button class="btn btn--sm btn--primary" onclick="editProduct(${product.id})">Edit</button>
+          <button class="btn btn--sm btn--outline" onclick="deleteProduct(${product.id})">Delete</button>
         </div>
       </div>
     `;
@@ -1354,19 +848,14 @@ function loadCustomersTable() {
       statusBadge = `<span class="status status--warning">Pending</span>`;
     }
     
-    const revenue = customer.revenue || 0;
-    
     row.innerHTML = `
       <td>${customer.customerId}</td>
       <td>${customer.companyName}</td>
-      <td>${customer.contactPerson}<br><small style="color: var(--color-text-secondary);">${customer.email}</small></td>
+      <td>${customer.contactPerson}<br><small>${customer.email}</small></td>
       <td>${customer.gstNumber}</td>
       <td>${statusBadge}</td>
-      <td>₹${(revenue / 1000).toFixed(1)}k</td>
       <td>
-        <button class="btn btn--sm btn--outline" onclick="viewCustomer(${customer.id})">
-          <i class="fas fa-eye"></i> View
-        </button>
+        <button class="btn btn--sm btn--outline" onclick="viewCustomer(${customer.id})">View</button>
       </td>
     `;
     tableBody.appendChild(row);
@@ -1439,44 +928,6 @@ function loadPendingVerifications() {
   });
 }
 
-function loadRecentOrders() {
-  const container = document.getElementById('recentOrdersList');
-  const countEl = document.getElementById('ordersCount');
-  
-  if (!container) return;
-  
-  if (countEl) {
-    countEl.textContent = `${appData.recentOrders.length} Recent Orders`;
-  }
-  
-  container.innerHTML = '';
-  
-  appData.recentOrders.forEach(order => {
-    const orderItem = document.createElement('div');
-    orderItem.className = 'order-item';
-    
-    let statusClass = 'status--info';
-    if (order.status === 'Delivered') statusClass = 'status--success';
-    else if (order.status === 'Processing') statusClass = 'status--warning';
-    else if (order.status === 'Shipped') statusClass = 'status--info';
-    
-    orderItem.innerHTML = `
-      <div class="order-info">
-        <h4>${order.id}</h4>
-        <p>${order.customer}</p>
-        <div class="order-meta">
-          <span class="status ${statusClass}">${order.status}</span>
-          <span>${order.product} - ${order.quantity} units</span>
-        </div>
-        <div class="order-date">${order.date}</div>
-      </div>
-      <div class="order-amount">₹${order.amount.toLocaleString()}</div>
-    `;
-    
-    container.appendChild(orderItem);
-  });
-}
-
 // Gallery Animation
 function setupGalleryAnimation() {
   console.log('Setting up gallery animation...');
@@ -1486,12 +937,10 @@ function setupGalleryAnimation() {
   
   // Duplicate gallery items for continuous scroll
   const items = galleryTrack.querySelectorAll('.gallery-item');
-  if (items.length > 0) {
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      galleryTrack.appendChild(clone);
-    });
-  }
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    galleryTrack.appendChild(clone);
+  });
 }
 
 // Contact Form
@@ -1593,12 +1042,3 @@ document.addEventListener('keydown', (e) => {
     });
   }
 });
-
-// Cleanup charts on page unload
-window.addEventListener('beforeunload', () => {
-  Object.values(charts).forEach(chart => {
-    if (chart) chart.destroy();
-  });
-});
-
-console.log('App script loaded successfully!');
