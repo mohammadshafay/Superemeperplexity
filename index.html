@@ -6,6 +6,7 @@
     <title>SUPREME HANDLOOM - Authentic Handloom Textiles Since 1967</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -40,6 +41,10 @@
                 <button class="btn btn--primary btn--lg" onclick="showLoginModal()">Start Trading</button>
                 <button class="btn btn--outline btn--lg" onclick="scrollToProducts()">View Catalog</button>
             </div>
+            <div class="gst-notice">
+                <i class="fas fa-shield-alt"></i>
+                <p>GST verified customers only - Register with your GST number to view wholesale prices</p>
+            </div>
         </div>
         <div class="hero-stats">
             <div class="stat">
@@ -48,7 +53,7 @@
             </div>
             <div class="stat">
                 <h3>1000+</h3>
-                <p>Satisfied Clients</p>
+                <p>GST Verified Clients</p>
             </div>
             <div class="stat">
                 <h3>6</h3>
@@ -67,6 +72,7 @@
                     <div class="gallery-overlay">
                         <h3>Traditional Lungi</h3>
                         <p>Premium handwoven lungis</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -74,6 +80,7 @@
                     <div class="gallery-overlay">
                         <h3>Cotton Gamcha</h3>
                         <p>Soft cotton gamchas</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -81,6 +88,7 @@
                     <div class="gallery-overlay">
                         <h3>Handloom Chadar</h3>
                         <p>Traditional chadars</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -88,6 +96,7 @@
                     <div class="gallery-overlay">
                         <h3>Cotton Bedsheet</h3>
                         <p>Pure cotton bedsheets</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -95,6 +104,7 @@
                     <div class="gallery-overlay">
                         <h3>Woolen Blanket</h3>
                         <p>Warm handwoven blankets</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -102,6 +112,7 @@
                     <div class="gallery-overlay">
                         <h3>Suit Material</h3>
                         <p>Premium fabric for suits</p>
+                        <div class="price-access-info">Register with GST to view prices</div>
                     </div>
                 </div>
             </div>
@@ -122,9 +133,9 @@
                             <p>Every product undergoes strict quality checks</p>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-shipping-fast"></i>
-                            <h4>Bulk Orders</h4>
-                            <p>Competitive pricing for wholesale quantities</p>
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>GST Verified Platform</h4>
+                            <p>Secure B2B trading for verified businesses only</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-handshake"></i>
@@ -144,6 +155,10 @@
     <section id="products" class="products">
         <div class="container">
             <h2>Product Categories</h2>
+            <div class="price-access-banner">
+                <i class="fas fa-info-circle"></i>
+                <p>Please register with your GST number and log in to view wholesale prices</p>
+            </div>
             <div class="product-filters">
                 <button class="filter-btn active" data-category="all">All Products</button>
                 <button class="filter-btn" data-category="Lungi">Lungi</button>
@@ -233,7 +248,7 @@
                 <div id="loginTab" class="tab-content active">
                     <form id="loginForm">
                         <div class="form-group">
-                            <label class="form-label">Username or Customer ID</label>
+                            <label class="form-label">Email or Customer ID</label>
                             <input type="text" class="form-control" id="loginUsername" required>
                         </div>
                         <div class="form-group">
@@ -242,31 +257,45 @@
                         </div>
                         <button type="submit" class="btn btn--primary btn--full-width">Login</button>
                     </form>
+                    <div class="demo-credentials">
+                        <p><strong>Demo Login:</strong></p>
+                        <p>Email: demo@example.com | Password: demo123</p>
+                        <p><small>This is a verified customer with GST number</small></p>
+                    </div>
                 </div>
                 
                 <div id="registerTab" class="tab-content">
                     <form id="registerForm">
                         <div class="form-group">
-                            <label class="form-label">Company Name</label>
+                            <label class="form-label">Company Name *</label>
                             <input type="text" class="form-control" id="companyName" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Contact Person</label>
+                            <label class="form-label">Contact Person *</label>
                             <input type="text" class="form-control" id="contactPerson" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email</label>
+                            <label class="form-label">Email *</label>
                             <input type="email" class="form-control" id="registerEmail" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Phone</label>
+                            <label class="form-label">Phone *</label>
                             <input type="tel" class="form-control" id="registerPhone" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Password</label>
+                            <label class="form-label">GST Number * <i class="fas fa-info-circle" title="Required for price access"></i></label>
+                            <input type="text" class="form-control" id="gstNumber" placeholder="22AAAAA0000A1Z5" maxlength="15" required>
+                            <small class="form-text">Format: 15-digit alphanumeric GST number</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password *</label>
                             <input type="password" class="form-control" id="registerPassword" required>
                         </div>
-                        <button type="submit" class="btn btn--primary btn--full-width">Register</button>
+                        <div class="gst-info-box">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>GST verification is mandatory to access wholesale prices. Your application will be reviewed within 24 hours.</p>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Register & Submit for Verification</button>
                     </form>
                 </div>
             </div>
@@ -292,6 +321,9 @@
                     </div>
                     <button type="submit" class="btn btn--primary btn--full-width">Login as Admin</button>
                 </form>
+                <div class="demo-credentials">
+                    <p><strong>Demo Admin:</strong> admin / admin123</p>
+                </div>
             </div>
         </div>
     </div>
@@ -301,6 +333,9 @@
         <div class="dashboard-header">
             <h2>Customer Dashboard</h2>
             <div class="dashboard-user">
+                <div class="verification-status" id="verificationStatus">
+                    <!-- Verification status will be displayed here -->
+                </div>
                 <span id="customerName"></span>
                 <button class="btn btn--outline btn--sm" onclick="logout()">Logout</button>
             </div>
@@ -318,6 +353,9 @@
             <div class="dashboard-main">
                 <div id="catalogSection" class="dashboard-section active">
                     <h3>Product Catalog</h3>
+                    <div id="catalogAccessMessage" class="access-message hidden">
+                        <!-- Access message for unverified customers -->
+                    </div>
                     <div class="catalog-grid" id="catalogGrid">
                         <!-- Products will be loaded here -->
                     </div>
@@ -343,15 +381,25 @@
                         <form>
                             <div class="form-group">
                                 <label class="form-label">Company Name</label>
-                                <input type="text" class="form-control" value="" readonly>
+                                <input type="text" class="form-control" id="profileCompanyName" readonly>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Customer ID</label>
                                 <input type="text" class="form-control" id="customerIdDisplay" readonly>
                             </div>
                             <div class="form-group">
+                                <label class="form-label">GST Number</label>
+                                <input type="text" class="form-control" id="profileGstNumber" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Verification Status</label>
+                                <div id="profileVerificationStatus" class="verification-badge">
+                                    <!-- Status will be displayed here -->
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Contact Person</label>
-                                <input type="text" class="form-control" value="" readonly>
+                                <input type="text" class="form-control" id="profileContactPerson" readonly>
                             </div>
                         </form>
                     </div>
@@ -360,59 +408,223 @@
         </div>
     </div>
 
-    <!-- Admin Dashboard -->
-    <div id="adminDashboard" class="dashboard hidden">
-        <div class="dashboard-header">
-            <h2>Admin Dashboard</h2>
-            <div class="dashboard-user">
-                <span>Admin Panel</span>
-                <button class="btn btn--outline btn--sm" onclick="logout()">Logout</button>
+    <!-- Enhanced Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard admin-dashboard hidden">
+        <div class="admin-header">
+            <div class="admin-brand">
+                <h2><i class="fas fa-chart-line"></i> SUPREME HANDLOOM Admin</h2>
+                <p class="admin-subtitle">Business Intelligence Dashboard</p>
+            </div>
+            <div class="admin-user-info">
+                <div class="user-profile">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Administrator</span>
+                </div>
+                <button class="btn btn--outline btn--sm" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
             </div>
         </div>
         
-        <div class="dashboard-content">
-            <div class="dashboard-sidebar">
-                <ul class="sidebar-menu">
-                    <li><a href="#" class="menu-link active" data-section="overview">Overview</a></li>
-                    <li><a href="#" class="menu-link" data-section="customers">Customers</a></li>
-                    <li><a href="#" class="menu-link" data-section="products">Products</a></li>
-                    <li><a href="#" class="menu-link" data-section="orders">Orders</a></li>
+        <div class="admin-layout">
+            <div class="admin-sidebar">
+                <ul class="admin-nav">
+                    <li><a href="#" class="nav-item active" data-section="overview">
+                        <i class="fas fa-tachometer-alt"></i> Overview
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="leaderboard">
+                        <i class="fas fa-trophy"></i> Leaderboard
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="analytics">
+                        <i class="fas fa-chart-bar"></i> Analytics
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="customers">
+                        <i class="fas fa-users"></i> Customers
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="verification">
+                        <i class="fas fa-shield-check"></i> GST Verification
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="products">
+                        <i class="fas fa-box"></i> Products
+                    </a></li>
+                    <li><a href="#" class="nav-item" data-section="orders">
+                        <i class="fas fa-shopping-cart"></i> Orders
+                    </a></li>
                 </ul>
             </div>
             
-            <div class="dashboard-main">
-                <div id="overviewSection" class="dashboard-section active">
-                    <h3>Business Overview</h3>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <h4>Total Customers</h4>
-                            <div class="stat-number">150</div>
+            <div class="admin-main">
+                <!-- Overview Section -->
+                <div id="overviewSection" class="admin-section active">
+                    <div class="section-header">
+                        <h3><i class="fas fa-tachometer-alt"></i> Business Overview</h3>
+                        <button class="btn btn--primary btn--sm" onclick="exportReport()">
+                            <i class="fas fa-download"></i> Export Report
+                        </button>
+                    </div>
+                    
+                    <div class="dashboard-widgets">
+                        <div class="widget widget--primary">
+                            <div class="widget-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <div class="widget-content">
+                                <h4>Total Revenue</h4>
+                                <div class="widget-value" id="totalRevenue">₹28,47,563</div>
+                                <div class="widget-trend positive">
+                                    <i class="fas fa-arrow-up"></i> +12.5% from last month
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <h4>Total Orders</h4>
-                            <div class="stat-number">1,245</div>
+                        
+                        <div class="widget widget--success">
+                            <div class="widget-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="widget-content">
+                                <h4>Total Orders</h4>
+                                <div class="widget-value" id="totalOrders">1,247</div>
+                                <div class="widget-trend positive">
+                                    <i class="fas fa-arrow-up"></i> +8.3% from last month
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <h4>Revenue</h4>
-                            <div class="stat-number">₹12,50,000</div>
+                        
+                        <div class="widget widget--info">
+                            <div class="widget-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="widget-content">
+                                <h4>Active Customers</h4>
+                                <div class="widget-value" id="activeCustomers">89</div>
+                                <div class="widget-trend positive">
+                                    <i class="fas fa-arrow-up"></i> +15.2% from last month
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <h4>Products</h4>
-                            <div class="stat-number">6</div>
+                        
+                        <div class="widget widget--warning">
+                            <div class="widget-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="widget-content">
+                                <h4>GST Verified</h4>
+                                <div class="widget-value" id="gstVerified">0</div>
+                                <div class="widget-trend">
+                                    <i class="fas fa-check-circle"></i> All verified customers
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-charts">
+                        <div class="chart-container">
+                            <h4><i class="fas fa-chart-line"></i> Revenue Trend (Last 12 Months)</h4>
+                            <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <h4><i class="fas fa-chart-bar"></i> Monthly Orders</h4>
+                            <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                <canvas id="ordersChart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div id="customersSection" class="dashboard-section">
-                    <h3>Customer Management</h3>
-                    <div class="customers-table">
+
+                <!-- Leaderboard Section -->
+                <div id="leaderboardSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-trophy"></i> Performance Leaderboard</h3>
+                        <div class="section-actions">
+                            <select class="form-control" id="leaderboardPeriod">
+                                <option value="monthly">This Month</option>
+                                <option value="quarterly">This Quarter</option>
+                                <option value="yearly">This Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="leaderboard-grid">
+                        <div class="leaderboard-card">
+                            <div class="leaderboard-header">
+                                <h4><i class="fas fa-box"></i> Top Products</h4>
+                                <span class="leaderboard-subtitle">By Revenue</span>
+                            </div>
+                            <div class="leaderboard-list" id="productLeaderboard">
+                                <!-- Product leaderboard will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="leaderboard-card">
+                            <div class="leaderboard-header">
+                                <h4><i class="fas fa-building"></i> Top Customers</h4>
+                                <span class="leaderboard-subtitle">By Revenue</span>
+                            </div>
+                            <div class="leaderboard-list" id="customerLeaderboard">
+                                <!-- Customer leaderboard will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Section -->
+                <div id="analyticsSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-bar"></i> Advanced Analytics</h3>
+                        <button class="btn btn--outline btn--sm" onclick="refreshAnalytics()">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                    
+                    <div class="analytics-grid">
+                        <div class="chart-container full-width">
+                            <h4><i class="fas fa-chart-area"></i> Sales Revenue Analysis</h4>
+                            <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                <canvas id="revenueAnalyticsChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <h4><i class="fas fa-chart-pie"></i> Product Category Distribution</h4>
+                            <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                <canvas id="categoryChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <h4><i class="fas fa-chart-bar"></i> Product Performance Trends</h4>
+                            <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                <canvas id="productTrendsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customers Section -->
+                <div id="customersSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-users"></i> Customer Management</h3>
+                        <div class="section-actions">
+                            <input type="search" class="form-control" placeholder="Search customers..." id="customerSearch">
+                            <button class="btn btn--primary btn--sm" onclick="addCustomer()">
+                                <i class="fas fa-plus"></i> Add Customer
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="data-table-container">
                         <table class="data-table">
                             <thead>
                                 <tr>
                                     <th>Customer ID</th>
                                     <th>Company</th>
                                     <th>Contact</th>
+                                    <th>GST Number</th>
                                     <th>Status</th>
+                                    <th>Revenue</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -422,48 +634,72 @@
                         </table>
                     </div>
                 </div>
-                
-                <div id="productsSection" class="dashboard-section">
-                    <h3>Product Management</h3>
-                    <button class="btn btn--primary" onclick="showAddProductForm()">Add New Product</button>
+
+                <!-- GST Verification Section -->
+                <div id="verificationSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-shield-check"></i> GST Verification Queue</h3>
+                        <div class="verification-stats">
+                            <span class="stat-badge stat-badge--pending" id="pendingCount">0 Pending</span>
+                            <span class="stat-badge stat-badge--success" id="verifiedCount">0 Verified</span>
+                        </div>
+                    </div>
+                    
+                    <div class="verification-queue">
+                        <div id="pendingVerifications">
+                            <!-- Pending verifications will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Section -->
+                <div id="productsSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-box"></i> Product Management</h3>
+                        <div class="section-actions">
+                            <select class="form-control" id="productCategory">
+                                <option value="all">All Categories</option>
+                                <option value="Lungi">Lungi</option>
+                                <option value="Gamcha">Gamcha</option>
+                                <option value="Chadar">Chadar</option>
+                                <option value="Bedsheet">Bedsheet</option>
+                                <option value="Blanket">Blanket</option>
+                                <option value="Suit">Suit</option>
+                            </select>
+                            <button class="btn btn--primary btn--sm" onclick="showAddProductForm()">
+                                <i class="fas fa-plus"></i> Add Product
+                            </button>
+                        </div>
+                    </div>
+                    
                     <div class="products-grid" id="adminProductsGrid">
                         <!-- Products will be loaded here -->
                     </div>
                 </div>
-                
-                <div id="ordersSection" class="dashboard-section">
-                    <h3>Order Management</h3>
-                    <div class="orders-table">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Order ID</th>
-                                    <th>Customer</th>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Amount</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#001</td>
-                                    <td>ABC Textiles</td>
-                                    <td>Traditional Lungi</td>
-                                    <td>50</td>
-                                    <td>₹15,000</td>
-                                    <td><span class="status status--success">Delivered</span></td>
-                                </tr>
-                                <tr>
-                                    <td>#002</td>
-                                    <td>XYZ Trading</td>
-                                    <td>Cotton Gamcha</td>
-                                    <td>100</td>
-                                    <td>₹12,000</td>
-                                    <td><span class="status status--warning">Pending</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                <!-- Orders Section -->
+                <div id="ordersSection" class="admin-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-shopping-cart"></i> Order Management</h3>
+                        <div class="section-actions">
+                            <select class="form-control" id="orderStatus">
+                                <option value="all">All Orders</option>
+                                <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="confirmed">Confirmed</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-orders">
+                        <div class="orders-header">
+                            <h4>Recent Orders</h4>
+                            <span class="orders-count" id="ordersCount">Loading...</span>
+                        </div>
+                        <div class="orders-list" id="recentOrdersList">
+                            <!-- Recent orders will be loaded here -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -478,9 +714,9 @@
                     <h4>SUPREME HANDLOOM</h4>
                     <p>Authentic Handloom Textiles Since 1967</p>
                     <div class="security-badges">
-                        <span class="badge">🔒 Secure</span>
-                        <span class="badge">✓ Verified</span>
-                        <span class="badge">⭐ Trusted</span>
+                        <span class="badge">🔒 GST Verified Platform</span>
+                        <span class="badge">✓ B2B Trusted</span>
+                        <span class="badge">⭐ 58+ Years</span>
                     </div>
                 </div>
                 <div class="footer-section">
