@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPREME HANDLOOM - Authentic Handloom Textiles Since 1967</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>SUPREME HANDLOOM</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="btn btn--primary btn--sm" onclick="showLoginModal()">Login</button></li>
+                <li><button class="btn btn--outline btn--sm" onclick="showAdminModal()">Admin</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>SUPREME HANDLOOM</h1>
+            <p class="hero-subtitle">Authentic Handloom Textiles Since 1967</p>
+            <p class="hero-description">Leading B2B supplier of premium handloom products with 58+ years of expertise</p>
+            <div class="hero-buttons">
+                <button class="btn btn--primary btn--lg" onclick="showLoginModal()">Start Trading</button>
+                <button class="btn btn--outline btn--lg" onclick="scrollToProducts()">View Catalog</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>58+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat">
+                <h3>1000+</h3>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="stat">
+                <h3>6</h3>
+                <p>Product Categories</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery Carousel -->
+    <section class="product-gallery">
+        <h2>Our Premium Handloom Collection</h2>
+        <div class="gallery-container">
+            <div class="gallery-track" id="galleryTrack">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Traditional Lungi">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Lungi</h3>
+                        <p>Premium handwoven lungis</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop" alt="Cotton Gamcha">
+                    <div class="gallery-overlay">
+                        <h3>Cotton Gamcha</h3>
+                        <p>Soft cotton gamchas</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Handloom Chadar">
+                    <div class="gallery-overlay">
+                        <h3>Handloom Chadar</h3>
+                        <p>Traditional chadars</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1631049421450-348ccd7f8949?w=400&h=300&fit=crop" alt="Cotton Bedsheet">
+                    <div class="gallery-overlay">
+                        <h3>Cotton Bedsheet</h3>
+                        <p>Pure cotton bedsheets</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop" alt="Woolen Blanket">
+                    <div class="gallery-overlay">
+                        <h3>Woolen Blanket</h3>
+                        <p>Warm handwoven blankets</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=300&fit=crop" alt="Suit Material">
+                    <div class="gallery-overlay">
+                        <h3>Suit Material</h3>
+                        <p>Premium fabric for suits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About SUPREME HANDLOOM</h2>
+                    <p>Established in 1967, SUPREME HANDLOOM has been a trusted name in the handloom textile industry for over 58 years. We specialize in authentic handwoven textiles, serving B2B clients across India with premium quality products.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h4>Quality Assured</h4>
+                            <p>Every product undergoes strict quality checks</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h4>Bulk Orders</h4>
+                            <p>Competitive pricing for wholesale quantities</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Trusted Partner</h4>
+                            <p>58+ years of industry experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Handloom Textiles">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Product Categories</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="Lungi">Lungi</button>
+                <button class="filter-btn" data-category="Gamcha">Gamcha</button>
+                <button class="filter-btn" data-category="Chadar">Chadar</button>
+                <button class="filter-btn" data-category="Bedsheet">Bedsheet</button>
+                <button class="filter-btn" data-category="Blanket">Blanket</button>
+                <button class="filter-btn" data-category="Suit">Suit Materials</button>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9119995353</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>101/198 Beconganj<br>Kanpur, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@supremehandloom.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919119995353" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Customer Login</h3>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                    <button class="tab-btn" onclick="showTab('register')">Register</button>
+                </div>
+                
+                <div id="loginTab" class="tab-content active">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label">Username or Customer ID</label>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Login</button>
+                    </form>
+                </div>
+                
+                <div id="registerTab" class="tab-content">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Contact Person</label>
+                            <input type="text" class="form-control" id="contactPerson" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="registerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Login</h3>
+                <span class="close" onclick="closeModal('adminModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" id="adminUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="adminPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Login as Admin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Dashboard -->
+    <div id="customerDashboard" class="dashboard hidden">
+        <div class="dashboard-header">
+            <h2>Customer Dashboard</h2>
+            <div class="dashboard-user">
+                <span id="customerName"></span>
+                <button class="btn btn--outline btn--sm" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="dashboard-sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="menu-link active" data-section="catalog">Product Catalog</a></li>
+                    <li><a href="#" class="menu-link" data-section="orders">Order History</a></li>
+                    <li><a href="#" class="menu-link" data-section="profile">Profile</a></li>
+                </ul>
+            </div>
+            
+            <div class="dashboard-main">
+                <div id="catalogSection" class="dashboard-section active">
+                    <h3>Product Catalog</h3>
+                    <div class="catalog-grid" id="catalogGrid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="ordersSection" class="dashboard-section">
+                    <h3>Order History</h3>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-info">
+                                <h4>Order #001</h4>
+                                <p>Traditional Lungi - 50 pieces</p>
+                                <span class="status status--success">Delivered</span>
+                            </div>
+                            <div class="order-amount">₹15,000</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="profileSection" class="dashboard-section">
+                    <h3>Profile Management</h3>
+                    <div class="profile-form">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" value="" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Customer ID</label>
+                                <input type="text" class="form-control" id="customerIdDisplay" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Contact Person</label>
+                                <input type="text" class="form-control" value="" readonly>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard hidden">
+        <div class="dashboard-header">
+            <h2>Admin Dashboard</h2>
+            <div class="dashboard-user">
+                <span>Admin Panel</span>
+                <button class="btn btn--outline btn--sm" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="dashboard-sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="menu-link active" data-section="overview">Overview</a></li>
+                    <li><a href="#" class="menu-link" data-section="customers">Customers</a></li>
+                    <li><a href="#" class="menu-link" data-section="products">Products</a></li>
+                    <li><a href="#" class="menu-link" data-section="orders">Orders</a></li>
+                </ul>
+            </div>
+            
+            <div class="dashboard-main">
+                <div id="overviewSection" class="dashboard-section active">
+                    <h3>Business Overview</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Total Customers</h4>
+                            <div class="stat-number">150</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Total Orders</h4>
+                            <div class="stat-number">1,245</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Revenue</h4>
+                            <div class="stat-number">₹12,50,000</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Products</h4>
+                            <div class="stat-number">6</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="customersSection" class="dashboard-section">
+                    <h3>Customer Management</h3>
+                    <div class="customers-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>Company</th>
+                                    <th>Contact</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customersTableBody">
+                                <!-- Customer data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="productsSection" class="dashboard-section">
+                    <h3>Product Management</h3>
+                    <button class="btn btn--primary" onclick="showAddProductForm()">Add New Product</button>
+                    <div class="products-grid" id="adminProductsGrid">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+                
+                <div id="ordersSection" class="dashboard-section">
+                    <h3>Order Management</h3>
+                    <div class="orders-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>ABC Textiles</td>
+                                    <td>Traditional Lungi</td>
+                                    <td>50</td>
+                                    <td>₹15,000</td>
+                                    <td><span class="status status--success">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>XYZ Trading</td>
+                                    <td>Cotton Gamcha</td>
+                                    <td>100</td>
+                                    <td>₹12,000</td>
+                                    <td><span class="status status--warning">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SUPREME HANDLOOM</h4>
+                    <p>Authentic Handloom Textiles Since 1967</p>
+                    <div class="security-badges">
+                        <span class="badge">🔒 Secure</span>
+                        <span class="badge">✓ Verified</span>
+                        <span class="badge">⭐ Trusted</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li>Lungi</li>
+                        <li>Gamcha</li>
+                        <li>Chadar</li>
+                        <li>Bedsheet</li>
+                        <li>Blanket</li>
+                        <li>Suit Materials</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 9119995353</p>
+                    <p>📍 101/198 Beconganj, Kanpur</p>
+                    <p>✉️ info@supremehandloom.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SUPREME HANDLOOM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
